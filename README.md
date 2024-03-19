@@ -5,7 +5,7 @@ Anexo de código de ayuda para la realización de la práctica.
 
 ## Sesión 1
 
-# Búsqueda de artículos
+### Búsqueda de artículos
 - `ArticuloSearchCriteria`
 - `ArticuloDAO`
 
