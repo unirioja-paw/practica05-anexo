@@ -19,7 +19,10 @@ public class UsuarioDaoMySQL implements UsuarioDAO {
 
 	public Usuario findUsuarioByExample(Usuario example) throws ExcepcionDeAplicacion 
 	{
+		// se codifica el password introducido por el usuario para buscarlo en BD
+		String encodedPassword = encodeValue(example.getPassword(), "SHA");
 		// TODO
+		 
 	}
 
     private String encodeValue(String value, String algorithm) {
