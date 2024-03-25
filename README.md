@@ -49,3 +49,38 @@ public class UsuarioDaoMySQL implements UsuarioDAO {
 
 }
 ```
+
+## Sesión 3
+
+### Registro de nuevo cliente
+
+
+Desplegable para seleccionar provincia:
+
+
+```html
+	<select name="provincia">
+		<option value="">- Elige -</option>
+		<c:forEach var="p" items="A Coruña,Álava,Albacete,Alicante,Almería,Araba,Asturias,Ávila,Badajoz,Baleares,Barcelona,Bizkaia,Burgos,Cáceres,Cádiz,Cantabria,Castellón,Ceuta,Ciudad Real,Córdoba,Cuenca,Gerona,Gipuzkoa,Guipuzcoa,Girona,Granada,Guadalajara,Huelva,Huesca,Illes Balears,Jaén,La Coruña,La Rioja,Las Palmas,León,Lérida,Lleida,Lugo,Madrid,Málaga,Melilla,Murcia,Navarra,Orense,Ourense,Palencia,Pontevedra,Salamanca,Santa Cruz de Tenerife,Segovia,Sevilla,Soria,Tarragona,Teruel,Toledo,Valencia,Valladolid,Vizcaya,Zamora,Zaragoza">
+			<option value="${p}">${p}</option>
+		</c:forEach>
+	</select>
+```
+
+
+
+Método `register` para registrar el nuevo cliente:
+
+```java
+public interface ClienteDAO {
+
+    public Cliente findByUsername(String username) throws ExcepcionDeAplicacion;
+    
+    public Cliente register(Cliente cliente, String password) throws ExcepcionDeAplicacion;
+}
+```
+
+
+### Envío de mails
+
+Revisa la clase `JavaxMailer` y el código del paquete `es.unirioja.paw.service` en general.
